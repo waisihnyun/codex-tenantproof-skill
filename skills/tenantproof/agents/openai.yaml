@@ -1,0 +1,4 @@
+interface:
+  display_name: "TenantProof"
+  short_description: "Review SaaS tenant isolation risks"
+  default_prompt: "Use $tenantproof to review this SaaS backend for tenant-isolation risks and generate regression-test guidance."

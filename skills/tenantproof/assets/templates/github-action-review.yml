@@ -1,0 +1,22 @@
+name: TenantProof Codex Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  tenantproof-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Codex TenantProof review
+        uses: openai/codex-action@v1
+        with:
+          prompt: |
+            Use $tenantproof in review mode.
+            Review this pull request for tenant isolation, missing authorization,
+            unsafe migrations, and PII logging. Focus only on serious issues with concrete evidence.

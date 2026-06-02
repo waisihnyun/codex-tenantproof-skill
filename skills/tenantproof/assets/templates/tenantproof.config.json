@@ -1,0 +1,13 @@
+{
+  "tenantMarkers": ["tenantId", "tenant_id", "orgId", "org_id", "workspaceId", "workspace_id"],
+  "authContextPaths": ["ctx.user.tenantId", "req.user.orgId", "session.user.workspaceId"],
+  "adminMiddleware": ["requireAdmin", "requireRole", "canManageTenant"],
+  "authMiddleware": ["requireAuth", "authenticate", "withAuth"],
+  "safeGlobalTables": ["countries", "currencies", "feature_flags"],
+  "sensitiveModels": ["Invoice", "User", "Document", "ApiKey", "PaymentMethod"],
+  "test": {
+    "runner": "vitest",
+    "httpClient": "supertest",
+    "defaultDeniedStatuses": [403, 404]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "codex-tenantproof-skill",
+  "version": "0.1.0",
+  "description": "Codex Skill for reviewing SaaS tenant-isolation risks and generating cross-tenant regression tests.",
+  "license": "MIT",
+  "bin": {
+    "codex-tenantproof-skill": "./bin/tenantproof.js",
+    "tenantproof-skill": "./bin/tenantproof.js"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "detect": "node skills/tenantproof/scripts/detect-stack.js --pretty"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "examples/",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
